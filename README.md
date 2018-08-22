@@ -10,7 +10,12 @@ in a list of packages and returns a manifest with packages assigned to trucks.
 [The original price list](https://s3.eu-central-1.amazonaws.com/scott-dev-test-files/SwingDev+Node.js+Recruitment+Task+Price+Table.pdf)
 
 ## To run the server
-I'll assume you have Node 10 installed, that's what I used to write this.
+I'll assume you have Node 10 and Homebrew installed, that's what I used to write this.
+
+Install sqlite using [Homebrew](https://brew.sh/)
+````
+brew install sqlite3
+````
 
 Just run npm install and it'll start the server.
 ````
@@ -63,7 +68,12 @@ The result should look something like this
 ````
 
 ## To run the tests
-Again you need Node 10 installed for this.
+Again you need Node 10 and Homebrew installed for this.
+
+Install sqlite using [Homebrew](https://brew.sh/)
+````
+brew install sqlite3
+````
 
 Run the npm dev install
 ````
@@ -74,3 +84,10 @@ Then just run the tests
 ````
 npm test
 ````
+
+## What's left to do?
+
+If I spent more time on this I'd probably do some input validation
+on the API. I'd also do something to stop SQL injection attacks by scrubbing
+the input, the sequelize orm might already handle this. If this were
+actually a product I'd write some more unit tests as well.
