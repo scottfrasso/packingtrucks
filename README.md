@@ -75,9 +75,9 @@ Install sqlite using [Homebrew](https://brew.sh/)
 brew install sqlite3
 ````
 
-Run the npm dev install
+Run the npm install
 ````
-npm install --dev
+npm install
 ````
 
 Then just run the tests
