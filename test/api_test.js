@@ -8,7 +8,7 @@ const expect = chai.expect;
 describe("see if the api works", () => {
     it("works for the example in the assignment", done => {
         chai.request(server)
-            .post("/api")
+            .post("/api/package")
             .send([
                 {"id": "ID-1", "weight": 345},
                 {"id": "OTHER-ID-2", "weight": 500},

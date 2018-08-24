@@ -33,7 +33,7 @@ curl -H "Content-type: application/json" -d '[
   { "id": "ID-1", "weight": 345 },
   { "id": "OTHER-ID-2", "weight": 500 },
   { "id": "CLIENT-ID-3", "weight": 300 }
-]' 'http://localhost:8080/api'
+]' 'http://localhost:8080/api/package'
 ````
 
 The result should look something like this
