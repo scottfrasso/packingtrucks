@@ -8,9 +8,51 @@ in trucks, using the minimum number of trucks, and assigning a price to the
 manifest. This was done in express and exposes 1 public endpoint which takes
 in a list of packages and returns a manifest with packages assigned to trucks.
 
-[The original Node.js recruitment assignment](https://s3.eu-central-1.amazonaws.com/scott-dev-test-files/SwingDev+Node.js+Recruitment+Assignment.pdf)
+## The original assignment
+A logistics company wants to put packages from a customers warehouse onto trucks. The only way to measure the packages is by their mass in kilograms (maximum 500kg). A trucks maximum load is 1000kg.
+Make an app that will say how many trucks are needed to move the clients cargo using as few trucks as possible, and calculate the price.
 
-[The original price list](https://s3.eu-central-1.amazonaws.com/scott-dev-test-files/SwingDev+Node.js+Recruitment+Task+Price+Table.pdf)
+An example API Request:
+````json
+[
+  { "id": "ID-1", "weight": 345 },
+  { "id": "OTHER-ID-2", "weight": 500 },
+  { "id": "CLIENT-ID-3", "weight": 300 },
+]
+````
+
+The corresponding reply would be:
+````json
+{
+    "price": 10.95,
+    "trucks": [{
+            "truckID": "unique truck ID",
+            "load": [{
+                    "id": "ID-1",
+                    "weight": 345
+                },
+                {
+                    "id": "OTHER-ID-2",
+                    "weight": 500
+                }
+            ]
+        },
+        {
+            "truckID": "other unique truck ID",
+            "load": [{
+                "id": "CLIENT-ID-3",
+                "weight": 300
+            }]
+        }
+    ]
+}
+````
+
+The price list:
+
+Up to 400kg: 0.01 x weight
+
+Over 400kg: 2 + 0.005 x weight
 
 ## To run the server
 I'll assume you have Node 10 and Homebrew installed, that's what I used to write this.
@@ -40,7 +82,7 @@ curl -H "Content-type: application/json" -d '[
 ````
 
 The result should look something like this
-````
+````json
 {
   "price": 10.95,
   "trucks": [
