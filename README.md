@@ -1,8 +1,5 @@
 # Packing packages in trucks
 
-[ ![Codeship Status for scottfrasso/packingtrucks](https://app.codeship.com/projects/c42498f0-89de-0136-87a5-66c8800f65f2/status?branch=master)](https://app.codeship.com/projects/303161)
-[![Coverage Status](https://coveralls.io/repos/github/scottfrasso/packingtrucks/badge.svg?branch=master)](https://coveralls.io/github/scottfrasso/packingtrucks?branch=master)
-
 This is a code test I was assigned. The test consists of putting packages
 in trucks, using the minimum number of trucks, and assigning a price to the
 manifest. This was done in express and exposes 1 public endpoint which takes
